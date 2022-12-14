@@ -1,0 +1,133 @@
+BDO TABLE
+======================================================================================
+
+create table BDO
+(
+bdoId int primary key auto_increment,
+Name varchar(20) NOT NULL,
+username varchar(20) UNIQUE NOT NULL,
+password varchar(20) NOT NULL
+
+);
+
+Description of BDO Table
+--------------------------
+ 
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| bdoId    | int         | NO   | PRI | NULL    | auto_increment |
+| Name     | varchar(20) | NO   |     | NULL    |                |
+| username | varchar(20) | NO   | UNI | NULL    |                |
+| password | varchar(20) | NO   |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+
+========================================================================================
+
+
+
+PROJECT TABLE
+=========================================================================================
+
+
+create table Project
+(
+pId int primary key auto_increment,
+Name varchar(20) UNIQUE NOT NULL,
+budget double NOT NULL,
+NoOfEmpWorking int
+);
+
+Description of Project Table
+------------------------------
+
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| pId            | int         | NO   | PRI | NULL    | auto_increment |
+| Name           | varchar(20) | NO   | UNI | NULL    |                |
+| budget         | double      | NO   |     | NULL    |                |
+| NoOfEmpWorking | int         | YES  |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
+
+========================================================================================
+
+
+GPM TABLE
+========================================================================================
+
+
+create table GPM
+(
+GPMId int primary key auto_increment,
+Name varchar(20) NOT NULL,
+username varchar(20) UNIQUE NOT NULL,
+password varchar(20) NOT NULL,
+email varchar(20) UNIQUE NOT NULL,
+assignedProjectId int,
+BdoId int NOT NULL,
+foreign key(assignedProjectId) references Project(pId),
+foreign key(BdoId) references BDO(bdoId) 
+ 
+);
+
+Description of GPM Table
+--------------------------
+
++-------------------+-------------+------+-----+---------+----------------+
+| Field             | Type        | Null | Key | Default | Extra          |
++-------------------+-------------+------+-----+---------+----------------+
+| GPMId             | int         | NO   | PRI | NULL    | auto_increment |
+| Name              | varchar(20) | NO   |     | NULL    |                |
+| username          | varchar(20) | NO   | UNI | NULL    |                |
+| password          | varchar(20) | NO   |     | NULL    |                |
+| email             | varchar(20) | NO   | UNI | NULL    |                |
+| assignedProjectId | int         | YES  | MUL | NULL    |                |
+| BdoId             | int         | NO   | MUL | NULL    |                |
++-------------------+-------------+------+-----+---------+----------------+
+
+=========================================================================================
+
+
+
+EMPLOYEE TABLE
+=========================================================================================
+
+create table Employee
+(
+empId int primary key auto_increment,
+Name varchar(20) NOT NULL,
+username varchar(20) UNIQUE NOT NULL,
+password varchar(20) NOT NULL,
+address varchar(30) ,
+phone varchar(12),
+totalNoOfDayWorked int,
+projectId int ,
+GpmId int,
+wages int,
+foreign key(projectId) references Project(pId),
+foreign key(GpmId) references GPM(GPMId) 
+ 
+);
+
+Description of Employee Table
+--------------------------------
++--------------------+-------------+------+-----+---------+----------------+
+| Field              | Type        | Null | Key | Default | Extra          |
++--------------------+-------------+------+-----+---------+----------------+
+| empId              | int         | NO   | PRI | NULL    | auto_increment |
+| Name               | varchar(20) | NO   |     | NULL    |                |
+| username           | varchar(20) | NO   | UNI | NULL    |                |
+| password           | varchar(20) | NO   |     | NULL    |                |
+| address            | varchar(30) | YES  |     | NULL    |                |
+| phone              | varchar(12) | YES  |     | NULL    |                |
+| totalNoOfDayWorked | int         | YES  |     | NULL    |                |
+| projectId          | int         | YES  | MUL | NULL    |                |
+| GpmId              | int         | YES  | MUL | NULL    |                |
+| wages              | int         | YES  |     | NULL    |                |
++--------------------+-------------+------+-----+---------+----------------+
+
+=========================================================================================
+
+
+
