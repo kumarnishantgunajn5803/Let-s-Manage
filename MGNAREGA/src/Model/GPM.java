@@ -5,9 +5,8 @@ public class GPM {
 	     private String name;
 	     private String username;
 	     private String password;
-	     private String email;
-	     private int assignedProjectId;
-	     private int BdoId;
+		private int assignedProjectId;
+	      
 	     
 	 public GPM() {
 		// TODO Auto-generated constructor stub
@@ -20,9 +19,9 @@ public class GPM {
 		this.name = name;
 		this.username = username;
 		this.password = password;
-		this.email = email;
+		 
 		this.assignedProjectId = assignedProjectId;
-		BdoId = bdoId;
+		 
 	}
 
 	public int getGPMId() {
@@ -57,13 +56,7 @@ public class GPM {
 		this.password = password;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	 
 
 	public int getAssignedProjectId() {
 		return assignedProjectId;
@@ -72,19 +65,12 @@ public class GPM {
 	public void setAssignedProjectId(int assignedProjectId) {
 		this.assignedProjectId = assignedProjectId;
 	}
-
-	public int getBdoId() {
-		return BdoId;
-	}
-
-	public void setBdoId(int bdoId) {
-		BdoId = bdoId;
-	}
+ 
 
 	@Override
 	public String toString() {
 		return "GPM [GPMId=" + GPMId + ", name=" + name + ", username=" + username + ", password=" + password
-				+ ", email=" + email + ", assignedProjectId=" + assignedProjectId + ", BdoId=" + BdoId + "]";
+				  + ", assignedProjectId=" + assignedProjectId + "]";
 	}
 	 
 	   

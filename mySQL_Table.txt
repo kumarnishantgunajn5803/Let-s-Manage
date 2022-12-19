@@ -65,9 +65,9 @@ username varchar(20) UNIQUE NOT NULL,
 password varchar(20) NOT NULL,
 email varchar(20) UNIQUE NOT NULL,
 assignedProjectId int,
-BdoId int NOT NULL,
-foreign key(assignedProjectId) references Project(pId),
-foreign key(BdoId) references BDO(bdoId) 
+
+foreign key(assignedProjectId) references Project(pId)
+ 
  
 );
 
@@ -83,7 +83,7 @@ Description of GPM Table
 | password          | varchar(20) | NO   |     | NULL    |                |
 | email             | varchar(20) | NO   | UNI | NULL    |                |
 | assignedProjectId | int         | YES  | MUL | NULL    |                |
-| BdoId             | int         | NO   | MUL | NULL    |                |
+ 
 +-------------------+-------------+------+-----+---------+----------------+
 
 =========================================================================================
@@ -103,10 +103,10 @@ address varchar(30) ,
 phone varchar(12),
 totalNoOfDayWorked int,
 projectId int ,
-GpmId int,
+ 
 wages int,
-foreign key(projectId) references Project(pId),
-foreign key(GpmId) references GPM(GPMId) 
+foreign key(projectId) references Project(pId)
+ 
  
 );
 
