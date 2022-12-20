@@ -32,7 +32,7 @@ public class AdminBdoInsert {
 		} catch (BdoException e) {
 			 System.out.println(e.getMessage());
 		}
-		 s.close();
+		 
 
 	}
 

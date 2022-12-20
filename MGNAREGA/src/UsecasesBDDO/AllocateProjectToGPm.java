@@ -23,7 +23,7 @@ public class AllocateProjectToGPm {
 		} catch (GpmException | ProjectException e) {
 			System.out.println(e.getMessage());
 		}
-		 s.close();
+		 
 
 	}
 

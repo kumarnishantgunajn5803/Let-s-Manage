@@ -67,7 +67,8 @@ public class Main {
 							break;
 						}else {
 							System.out.println(ConsoleColors.RED_BACKGROUND + ConsoleColors.WHITE_BOLD_BRIGHT + "CHOOSE CORRECT INPUT RANGE FROM 1 TO 7" + ConsoleColors.RESET);
-						}							
+						}
+						
 					}
 					appOpening();
 						

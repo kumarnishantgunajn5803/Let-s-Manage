@@ -89,7 +89,7 @@ public class BdoDaoImpl implements BdoDao {
 			 
 			 int x = ps.executeUpdate();
 			 if(x>0) {
-				 message ="Project Created Successfully.";
+				 message ="GPM Created Successfully.";
 			 } 
 			
 		} catch (SQLException e) {
