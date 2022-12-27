@@ -10,7 +10,7 @@
 # Description Of The Project :-
 The MGNREGA was initiated with the objective of “enhancing livelihood security in rural areas by providing at least 100 days of guaranteed wage employment in a financial year, to every household whose adult members volunteer to do unskilled manual work”.
 
-⚡ Want to Know More About Project 👉: [📼Go through this Video](https://drive.google.com/file/d/1AsSOzMe264Wun1djM4uLEoNQJKWY0XGE/view?usp=sharing)<br>
+⚡ Want to Know More About Project 👉: [📼Go through this Video](https://drive.google.com/file/d/1J443RNrX6QWADWm8r4pjwWPDyhA45_8E/view?usp=sharing)<br>
 
 # Users of this project are :-
 • BDO </br>
